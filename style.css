@@ -5,39 +5,42 @@
 }
 
 :root {
-  --blur-apresentacao: rgba(150,150,150,1);
-  --blur-texto-sobre-mim: rgba(5, 5, 5, .4);
+
+  --blur-bordas : rgba(245, 235, 225, 0.7);
+  --blur-textos: rgba(5, 5, 5, .4);
   --blur-principal: rgba(15, 15, 15, .5);
-  --blur-sobre-mim: rgba(139, 139, 139, 0.616);
-  --hover-apresentacao: rgba(255, 255, 255, 0.9);
+
 }
 
 body * {
   font-family: "Host Grotesk", sans-serif;
   font-weight: 700;
   position: relative;
+  color: rgb(197, 201, 198);
 }
 
 body {
   padding: 25px 0 0 0;
-  background-image: linear-gradient(to right, rgb(227, 222, 222),rgb(151, 156, 152), rgb(93, 97, 94));
+ background: linear-gradient(120deg, rgba(0, 0, 0, 0.9), rgba(139, 0, 0, 0.8), rgba(28, 28, 28, 0.9));
+  background-attachment: fixed;
+
 }
 
-/* #container {
-  width: 1600px;
-  height: 800px;
-  margin: auto 100px auto 100px;
-  padding: 2rem;
-  border: 1px solid red;
-} */
+#container {
+  max-width: 1600px;
+  max-height: 800px;
+  height: 1200px;
+  margin: 0 auto;
+ 
+  /* border: 1px solid red; */
+}
 
 #quadrado-blur {
   width: 1600px;
   height: 800px;
-  border: 1px solid green;
-  margin: auto 100px auto 100px;
+  margin: 0px auto;/* margin: auto 100px auto 100px; */
   border-radius: 15px;
-  border: 1px solid var(--blur-principal);
+  border: 4px solid var(--blur-bordas);
   background-color: var(--blur-principal);
 }
 
@@ -47,20 +50,18 @@ body {
 
 #blur-apresentacao {
   position: relative;
-  border: 1px solid var(--blur-apresentacao);
-  background-color: var(--blur-apresentacao);
+  border: 1px solid var(--blur-bordas);
   width: 700px;
-  max-height: 192px;
-  border-radius: 25px 25px 0 0;
+  max-height: 193px;
+  border-radius: 15px 0 0 0;
   
 }
 
 #apresentacao .foto-de-perfil img{
-  border-radius: 15px;
   margin: auto;
   width: 16rem;
-  height: 12rem;
-  border-radius: 25px 25px 0 0 ;
+  height: 190px;
+  border-radius: 10px 25px 0 0 ;
 }
 
 #nome-lema {
@@ -111,8 +112,7 @@ body {
 
 #blur-divisao {
   position: relative;
-  border: 1px solid var(--blur-sobre-mim);
-  background: var(--blur-sobre-mim);
+
   width: 699px;
   height: 605px;
   top: -55px;
@@ -124,7 +124,7 @@ body {
 }
 
 #titulo-sobre-mim .titulo {
-  color: black;
+
   font-size: 50px;
   display: block;
   text-align: center;
@@ -133,9 +133,8 @@ body {
 
 #blur-texto-sobre-mim {
   position: relative;
-  border: 0px solid var(--blur-texto-sobre-mim);
   border-radius: 15px;
-  background: var(--blur-texto-sobre-mim);
+  background: var(--blur-textos);
   width: 550px;
   height: 480px;
   margin: 15px 50px 0 50px;
@@ -153,4 +152,122 @@ body {
 #texto-sobre-mim p {
   padding: 15px 15px 0 15px;
   font-size: 19px;
+}
+
+ #blur-qualidades {
+  position: relative;
+  border-radius: 0 0 15px 0;
+  height: 400px;
+  top: 390px;
+  margin: 0px;
+}
+
+#blur-texto-qualidades {
+  position: relative;
+  bottom: 120px;
+  width: 805px;
+  height: 299px;
+  margin: 0 0 0 745px;
+  border-radius: 15px;
+  background: var(--blur-textos);
+  
+}
+
+#blur-qualidades .titulo-qualidades {
+  border-left: 4px solid var(--blur-bordas);
+  height: 413px;
+  position: absolute;
+  bottom: 185px;
+  left: 700px;
+  right: 0;
+  width: 900px;
+  text-align: center;
+  font-size: 50px;
+  text-decoration: underline;
+  margin: 0;
+}
+
+#texto-qualidades {
+  color: rgb(197, 201, 198);
+}
+
+#texto-qualidades p {
+  text-align: justify;
+  padding: 7px 15px 0 15px;
+  font-size: 18px;
+}
+
+#blur-formacoes {
+  border: 4px solid var(--blur-bordas);
+  border-bottom: 2px solid var(--blur-bordas);
+  width: 450px;
+  height: 192px;
+  position: absolute;
+  left: 700px;
+  top:0;
+}
+
+#titulo-formacoes {
+  color: rgb(197, 201, 198);
+  font-size: 21px;
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#blur-projetos {
+  position: absolute;
+  border-bottom: 2px solid var(--blur-bordas);
+  border: 4px solid var(--blur-bordas);
+  width: 448px;
+  top: 0px;
+  left: 1150px;
+  height: 192px;
+  border-radius: 0 15px 0 0 ;
+}
+
+#titulo-projetos {
+  color: rgb(197, 201, 198);
+  font-size: 21px;
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+}
+
+
+#blur-certificados {
+  position: absolute;
+  border-top: 2px solid var(--blur-bordas);
+  border: 4px solid var(--blur-bordas);
+  width: 450px;
+  top: 0px;
+  left: 700px;
+  top: 192px;
+  height: 192px;
+}
+
+#titulo-certificados {
+  color: rgb(197, 201, 198);
+  font-size: 21px;
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#blur-objetivos-futuros {
+  position: absolute;
+  border-top: 2px solid var(--blur-bordas);
+  border: 4px solid var(--blur-bordas);
+  width: 448px;
+  height: 192px;
+  top: 192px;
+  left: 1150px;
+}
+
+#titulo-objetivos-futuros {
+  color: rgb(197, 201, 198);
+  font-size: 21px;
+  display: block;
+  text-align: center;
+  text-decoration: underline;
 }
