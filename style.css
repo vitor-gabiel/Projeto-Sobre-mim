@@ -19,6 +19,7 @@ body * {
   color: rgb(197, 201, 198);
 }
 
+
 body {
   padding: 25px 0 0 0;
  background: linear-gradient(120deg, rgba(0, 0, 0, 0.9), rgba(139, 0, 0, 0.8), rgba(28, 28, 28, 0.9));
@@ -28,15 +29,17 @@ body {
 
 #container {
   width: 1600px;
-  height: 1200px;
-  margin: 0 auto;
+  height: 800px;
+  margin: 0 auto; */
  
   /* border: 1px solid red; */
 }
 
+
+
 #quadrado-blur {
   width: 1600px;
-  height: 800px;
+  height: 100%;
   margin: 0px auto;/* margin: auto 100px auto 100px; */
   border-radius: 15px;
   border: 4px solid var(--blur-bordas);
@@ -373,15 +376,23 @@ body {
 }
 
 @media (max-width: 720px) {
-  #container {
-  padding: 0 auto;
-  max-width: 720px;
-  max-height: 1080px;
+
+  * {
+    max-width: 150vw;
+    margin: 0 0px 0 0;
+  }
+ #container {
+    position: relative;
+    width: 720px;
+    height: 1300px;
+    margin: 20px auto;
+    zoom: 4;
+    
   }
 
   #quadrado-blur {
     width: 700px;
-    height: 1280px;
+    height: 100%;
   }
 
   #sobre-mim {
